@@ -42,12 +42,12 @@ const Inscription = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              width: '80%', // Ajuster la largeur du formulaire
+              width: '80%', 
               maxWidth: '400px', // Limite de largeur pour que le formulaire ne soit pas trop grand
             }}
           >
             <Typography component="h1" variant="h5" gutterBottom>
-              Inscription
+              Inscrivez-vous
             </Typography>
             <form noValidate style={{ width: '100%' }}>
               <TextField
