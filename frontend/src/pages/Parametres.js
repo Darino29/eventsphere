@@ -30,9 +30,9 @@ const Parametres = () => {
     setOpen(false);
   };
 
-  // Fonction pour confirmer la suppression (peut être personnalisé)
+  // Fonction pour confirmer la suppression
   const handleConfirmDelete = () => {
-    // Ajoutez ici la logique de suppression (ex: appel API)
+    // Ajoutez ici la logique de suppression
     console.log("Compte supprimé");
     setOpen(false); // Ferme la popup après confirmation
   };
