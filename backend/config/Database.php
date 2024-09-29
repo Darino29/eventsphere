@@ -1,19 +1,18 @@
 <?php
 // dbConfig.php
 
-// Informations de connexion à la base de données
-$host = 'localhost'; // Adresse du serveur MySQL
-$user = 'root';      // Nom d'utilisateur MySQL
-$password = '';      // Mot de passe MySQL
-$database = 'EventSphere'; // Nom de la base de données
+// Configuration de la base de données
+$host = 'localhost'; 
+$user = 'root';      
+$password = '';      
+$database = 'Eventsphere'; 
 
-// Connexion à MySQL avec MySQLi
-$conn = new mysqli($host, $user, $password, $database);
-
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("Erreur de connexion : " . $conn->connect_error);
+// Connexion à MySQL avec PDO
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$database", $user, $password);
+    // Configuration de PDO pour afficher les erreurs
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
 }
-
-echo "Connexion réussie à la base de données";
 ?>
