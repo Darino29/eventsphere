@@ -1,8 +1,10 @@
 import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import bgHome from '../images/image1.jpg';
-import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
-import ExploreTwoToneIcon from '@mui/icons-material/ExploreTwoTone';
+//import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
+//import ExploreTwoToneIcon from '@mui/icons-material/ExploreTwoTone';
+import {Link} from 'react-router-dom';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'; 
 
 const HeroSection = () => {
   return (
@@ -19,7 +21,7 @@ const HeroSection = () => {
         color: '#fff',
       }}
     >
-      {/* Overlay (Filtre sombre pour améliorer la lisibilité du texte) */}
+      {/* Overlay*/}
       <Box
         sx={{
           position: 'absolute',
@@ -45,11 +47,19 @@ const HeroSection = () => {
         Donnez vie à vos événements ! 🎉
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Button className="bn5" size="large" startIcon={<EditTwoToneIcon/>} sx={{ m: 2 ,fontSize: '0.7rem',  color: '#D6E5FB'}}>
+          {/*<Button component= {Link} to="/inscription" className="bn5" size="large" startIcon={<EditTwoToneIcon/>} sx={{ m: 2 ,fontSize: '0.7rem',  color: '#D6E5FB'}}>
             Créer
           </Button>
-          <Button className="bn5" size="large" startIcon={<ExploreTwoToneIcon/>} sx={{ m: 2 ,fontSize: '0.7rem', color: '#D6E5FB'}}>
+          <Button component= {Link} to="/connexion" className="bn5" size="large" startIcon={<ExploreTwoToneIcon/>} sx={{ m: 2 ,fontSize: '0.7rem', color: '#D6E5FB'}}>
             Explorer
+          </Button>*/}
+          <Button
+            component= {Link} to="/connexion" className="bn5"
+            size="large"
+            sx={{ m: 2 ,fontSize: '0.7rem',  color: '#D6E5FB'}}
+            endIcon={<RocketLaunchIcon />} // Icône de fusée
+          >
+            Get Started
           </Button>
         </Box>
       </Container>
